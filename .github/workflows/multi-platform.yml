@@ -43,6 +43,8 @@ jobs:
           export-pdb: true
           bindings-ref: main
           combine: true
+          cli: nightly
+          sdk: nightly
           target: ${{ matrix.config.target }}
 
   package:
