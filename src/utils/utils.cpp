@@ -5,8 +5,7 @@ std::string Utils::narrow(const wchar_t* str) {
         return "";
     }
 
-#ifdef GEODE_IS_ANDROID
-#ifdef GEODE_IS_IOS
+#if defined(GEODE_IS_ANDROID) || defined(GEODE_IS_IOS)
     std::string result;
     size_t len = wcslen(str);
     
@@ -45,8 +44,7 @@ std::string Utils::narrow(const wchar_t* str) {
 }
 
 std::wstring Utils::widen(const char* str) {
-#ifdef GEODE_IS_ANDROID
-#ifdef GEODE_IS_IOS
+#if defined(GEODE_IS_ANDROID) || defined(GEODE_IS_IOS)
 
     std::wstring result;
     result.reserve(strlen(str));
@@ -165,7 +163,7 @@ std::vector<std::string> Utils::splitByChar(std::string str, char splitChar) {
 std::string Utils::getTexture() {
     cocos2d::ccColor3B color = Mod::get()->getSettingValue<cocos2d::ccColor3B>("background_color");
     
-	std::string texture = color == ccc3(51, 68, 153) ? "GJ_square02.png" : "GJ_square06.png";
+    std::string texture = color == ccc3(51, 68, 153) ? "GJ_square02.png" : "GJ_square06.png";
 
     return texture;
 }
@@ -187,8 +185,8 @@ std::string Utils::getSimplifiedString(std::string str) {
 void Utils::setBackgroundColor(cocos2d::extension::CCScale9Sprite* bg) {
     cocos2d::ccColor3B color = Mod::get()->getSettingValue<cocos2d::ccColor3B>("background_color");
 
-	if (color == ccc3(51, 68, 153))
-		color = ccc3(255, 255, 255);
+    if (color == ccc3(51, 68, 153))
+        color = ccc3(255, 255, 255);
 
-	bg->setColor(color);
+    bg->setColor(color);
 }
