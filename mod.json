@@ -1,8 +1,9 @@
 {
-	"geode": "4.2.0",
+	"geode": "4.2.1",
 	"gd": {
 		"win": "2.2074",
-		"android": "2.2074"
+		"android": "2.2074",
+		"ios": "2.2074"
 	},
 	"version": "2.4.0",
 	"id": "zilko.xdbot",
