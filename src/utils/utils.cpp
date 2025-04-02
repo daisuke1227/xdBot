@@ -6,6 +6,7 @@ std::string Utils::narrow(const wchar_t* str) {
     }
 
 #ifdef GEODE_IS_ANDROID
+#ifdef GEODE_IS_IOS
     std::string result;
     size_t len = wcslen(str);
     
@@ -45,6 +46,7 @@ std::string Utils::narrow(const wchar_t* str) {
 
 std::wstring Utils::widen(const char* str) {
 #ifdef GEODE_IS_ANDROID
+#ifdef GEODE_IS_IOS
 
     std::wstring result;
     result.reserve(strlen(str));
