@@ -17,7 +17,6 @@ add_library(${PROJECT_NAME} SHARED
     src/macro.cpp
     src/utils/utils.cpp
     src/gdr/gdr.cpp
-    src/renderer/renderer.cpp
 
     src/hacks/other.cpp
     src/hacks/tps_bypass.cpp
