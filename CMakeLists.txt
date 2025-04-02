@@ -30,8 +30,6 @@ add_library(${PROJECT_NAME} SHARED
     src/ui/macro_editor.cpp
     src/ui/button_edit_layer.cpp
     src/ui/game_ui.cpp
-    src/ui/record_layer.cpp
-    src/ui/render_settings_layer.cpp
     src/ui/load_macro_layer.cpp
     src/ui/clickbot_layer.cpp
     src/ui/button_setting.cpp
